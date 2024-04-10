@@ -50,7 +50,7 @@ export default function App() {
       <div className="fixed top-4 right-4 dark:bg-slate-900 bg-white rounded-lg">
       {options.map(opt => {
         return (
-            <button key={opt.text} className={`w-8 h-8 m-1 rounded-lg leading-9 text-lg text-black dark:text-white hover:bg-gray-100 dark:hover:bg-slate-800 ${theme === opt.text && 'text-yellow-600 dark:text-blue-500' }`}
+            <button key={opt.text} className={`w-8 h-8 m-1 rounded-lg leading-9 text-lg hover:bg-gray-100 dark:hover:bg-slate-800 ${theme === opt.text ? 'text-yellow-500 dark:text-blue-500' : 'text-black dark:text-white' }`}
               onClick={() => setTheme(opt.text)}
               >
               <ion-icon name={opt.icon}></ion-icon>
